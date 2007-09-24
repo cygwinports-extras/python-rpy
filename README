@@ -1,0 +1,78 @@
+python-rpy
+------------------------------------------
+RPy is a very simple, yet robust, Python interface to the R Programming 
+Language. It can manage all kinds of R objects and can execute arbitrary 
+R functions (including the graphic functions). All errors from the R 
+language are converted to Python exceptions. Any module installed for 
+the R system can be used from within Python.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  python-2.5.1-1
+  python-numpy-1.0.3.1-1
+  R-2.5.1-1
+
+Additional build requirements:
+  binutils-20060817-1
+  cygport-0.3.1-1
+  gcc-core-3.4.4-3
+  python-2.5.1-1
+
+Canonical website:
+  http://rpy.sourceforge.net/
+
+Canonical download:
+  http://downloads.sourceforge.net/rpy/
+
+-------------------------------------------
+
+Build instructions:
+  unpack python-rpy-1.0_RC3-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./python-rpy-1.0_RC3-X.cygport all
+
+This will create:
+  /usr/src/python-rpy-1.0_RC3-X-src.tar.bz2
+  /usr/src/python-rpy-1.0_RC3-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/python2.5/site-packages/_rpy2051.dll
+  /usr/lib/python2.5/site-packages/rpy-1.0_RC3-py2.5.egg-info
+  /usr/lib/python2.5/site-packages/rpy.py
+  /usr/lib/python2.5/site-packages/rpy.pyc
+  /usr/lib/python2.5/site-packages/rpy.pyo
+  /usr/lib/python2.5/site-packages/rpy_io.py
+  /usr/lib/python2.5/site-packages/rpy_io.pyc
+  /usr/lib/python2.5/site-packages/rpy_io.pyo
+  /usr/lib/python2.5/site-packages/rpy_options.py
+  /usr/lib/python2.5/site-packages/rpy_options.pyc
+  /usr/lib/python2.5/site-packages/rpy_options.pyo
+  /usr/lib/python2.5/site-packages/rpy_tools.py
+  /usr/lib/python2.5/site-packages/rpy_tools.pyc
+  /usr/lib/python2.5/site-packages/rpy_tools.pyo
+  /usr/lib/python2.5/site-packages/rpy_version.py
+  /usr/lib/python2.5/site-packages/rpy_version.pyc
+  /usr/lib/python2.5/site-packages/rpy_version.pyo
+  /usr/lib/python2.5/site-packages/rpy_wintools.py
+  /usr/lib/python2.5/site-packages/rpy_wintools.pyc
+  /usr/lib/python2.5/site-packages/rpy_wintools.pyo
+  /usr/share/doc/Cygwin/python-rpy-1.0_RC3.README
+  /usr/share/doc/python-rpy-1.0_RC3/NEWS
+  /usr/share/doc/python-rpy-1.0_RC3/README
+  /usr/share/doc/python-rpy-1.0_RC3/TODO
+
+------------------
+
+Port Notes:
+
+----- version 1.0_RC3-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
