@@ -1,0 +1,7 @@
+ORIG_PN="rpy"
+inherit R distutils
+
+DESCRIPTION="Python bindings for the GNU R language"
+HOMEPAGE="http://rpy.sourceforge.net/"
+SRC_URI="mirror://sourceforge/rpy/${ORIG_PN}-${PV}.tar.gz"
+SRC_DIR="${ORIG_PN}-${PV}"
