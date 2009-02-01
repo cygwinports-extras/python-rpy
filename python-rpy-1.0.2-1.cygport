@@ -4,4 +4,7 @@ inherit R distutils
 DESCRIPTION="Python bindings for the GNU R language"
 HOMEPAGE="http://rpy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rpy/${ORIG_PN}-${PV}.tar.gz"
+PATCH_URI="1.0.1-cygwin.patch
+           1.0.2-R28.patch"
+
 SRC_DIR="${ORIG_PN}-${PV}"

@@ -1,0 +1,24 @@
+--- origsrc/rpy-1.0.2/src/RPy.h	2009-02-01 02:48:22.410909700 -0600
++++ src/rpy-1.0.2/src/RPy.h	2009-02-01 02:44:57.000000000 -0600
+@@ -74,7 +74,9 @@
+ #  endif
+ #endif  /* _WIN32 */
+ 
++#if R_VERSION < 133120
+ #include <Rdevices.h> /* must follow Graphics.h */
++#endif
+ 
+ 
+ /* Missing definitions from Rinterface.h or RStartup.h */
+--- origsrc/rpy-1.0.2/src/rpymodule.c	2009-02-01 02:44:58.301534700 -0600
++++ src/rpy-1.0.2/src/rpymodule.c	2009-02-01 02:49:11.348409700 -0600
+@@ -1778,7 +1778,9 @@ void r_finalize(void)
+     R_dot_Last();           
+     R_RunExitFinalizers();  
+     CleanEd();              
++#if (R_VERSION < R_Version(2,8,0))
+     KillAllDevices();
++#endif
+ 
+ #if (R_VERSION >= R_Version(2,4,0)) 
+     R_CleanTempDir();
